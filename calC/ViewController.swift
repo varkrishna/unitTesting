@@ -28,11 +28,14 @@ class ViewController: UIViewController {
         
         if (text1.text?.characters.count)! > 0
         {
-            let num1 = text1.text!
+            //let num1 = text1.text!
             if (text2.text?.characters.count)!>0
             {
-                let num2 = text2.text!
-               print(self.engine(a: Int(num1)!, b: Int(num2)!))
+               // let num2 = text2.text!
+               let vc = SecondViewController()
+                vc.resultString = String(self.engine(a: 5, b: 5))
+                self.present(vc, animated: true, completion: nil)
+              
             }
             else
             {
@@ -48,8 +51,7 @@ class ViewController: UIViewController {
     func engine(a:Int,b:Int) -> Int
     {
     
-        let ansvalue = a+b
-        return ansvalue
+        return a+b
         
     }
     
