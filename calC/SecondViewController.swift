@@ -18,7 +18,7 @@ class SecondViewController: UIViewController {
         if let resultedOutput = resultString
         {
             //resultLabel.text = resultedOutput
-            //resultLabel.text = resultedOutput
+            resultLabel.text = resultedOutput
             print(resultedOutput)
         }
 
@@ -34,9 +34,8 @@ class SecondViewController: UIViewController {
     
     @IBAction func doneButtonPressed(_ sender: Any) {
         
-        //Code to goto Third View Controller
-        
-        
+        let lastVc = self.storyboard?.instantiateViewController(withIdentifier: "Thankyou")  as! thankyouViewController
+        self.present(lastVc, animated: true, completion: nil)
     }
 
     /*

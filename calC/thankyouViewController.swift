@@ -24,7 +24,7 @@ class thankyouViewController: UIViewController {
     
 
     @IBAction func quitbtn(_ sender: UIButton) {
-        let mainVC = ViewController()
+        let mainVC = self.storyboard?.instantiateViewController(withIdentifier: "HomeScreen") as! ViewController
         self.present(mainVC, animated: true, completion: nil)
     }
     /*
